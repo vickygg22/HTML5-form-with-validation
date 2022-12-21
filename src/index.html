@@ -1,29 +1,100 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+    <div class="container-fluid">
+    <form name="myForm">
+        <header class="bg-light p-2"><h3>Payment form example</h3></header>
+        <div id="firstRow" class="row">
+
+            <div id="firstCol" class="col-6">
+              Card #
+              <input id="firstInput" type="number" class="form-control webkit" placeholder="0000-0000-0000-0000" aria-label="card" name="myInput" required>
+            </div>
+            <div class="col-2">
+              CVC #
+              <input id="secondInput" type="password" class="form-control" placeholder="0000" aria-label="cvc" required>
+            </div>
+            <div class="col-4">
+              Amount <i class="fa-solid fa-dollar-sign"></i>
+                <input id="thirdInput" type="number" class="form-control" placeholder="Amount" aria-label="amount" required>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              First name
+              <input id="fourthInput" type="text" class="form-control" aria-label="First name" required>
+            </div>
+            <div class="col-6">
+              Last name
+              <input id="fifthInput" type="text" class="form-control" aria-label="Last name" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              City
+              <input id="sixthInput" type="text" class="form-control" aria-label="city" required>
+            </div>
+            <div class="col-3">
+              State
+              <select id="selectedd" class="form-select" aria-label="Default select example" required>
+                <option value="0" id="stateSelect" disabled selected>Pick a state</option>
+                <option value="1">Alaska</option>
+                <option value="2">Arizona</option>
+                <option value="3">California</option>
+                <option value="4">Florida</option>
+                <option value="5">New York</option>
+                <option value="6">Virginia</option>
+                <option value="7">Washington DC</option>
+              </select>
+            </div>
+            <div class="col-3">
+              Postal code
+                <input id="seventhInput" type="number" class="form-control" aria-label="postal code" required>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-3">
+              We accept:
+              <div class="form-control cards" required>
+                <input type="radio" id="html1" name="fav_language" value="HTML">
+                <label for="html1"><i class="fa-brands fa-cc-mastercard spaceBetweenCards""></i></label>
+                <input type="radio" id="html2" name="fav_language" value="HTML">
+                <label for="html2"><i class="fa-brands fa-cc-visa spaceBetweenCards"></i></label>
+                <input type="radio" id="html3" name="fav_language" value="HTML">
+                <label for="html3"><i class="fa-brands fa-cc-diners-club spaceBetweenCards"></i></label>
+                <input type="radio" id="html4" name="fav_language" value="HTML">
+                <label for="html4"><i class="fa-brands fa-cc-amex spaceBetweenCards"></i></label>
+              </div>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-6">
+              Message
+                <textarea id="eigthInput" class="form-control" name="textarea" rows="4" cols="80"></textarea>
+                <small class="text-muted">Add any notes here.</small>
+            </div>
+          </div>
+          <footer class="bg-light text-lg-start">
+            <div class="p-2 footer d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
+              <input type="submit" id="submitBtn" class="btn btn-primary" value="Send">
+          </footer>
+      </form>
     </div>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
   </body>
 </html>
+
